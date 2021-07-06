@@ -25,8 +25,8 @@ class IdeaService
 
   def create_idea
     if @category.id
-    @idea = Idea.new(category_id: @category.id, body: @params['body'])
-    @idea.save!
+      @idea = Idea.new(category_id: @category.id, body: @params['body'])
+      @idea.save!
     else
       save_idea_and_category
     end
